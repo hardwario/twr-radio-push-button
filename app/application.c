@@ -1,5 +1,7 @@
 #include <application.h>
 
+#define FIRMWARE "bcf-kit-push-button:" TAG
+
 #define BATTERY_UPDATE_INTERVAL (60 * 60 * 1000)
 #define TEMPERATURE_PUB_NO_CHANGE_INTEVAL (15 * 60 * 1000)
 #define TEMPERATURE_PUB_VALUE_CHANGE 0.2f
@@ -31,14 +33,6 @@ void button_event_handler(bc_button_t *self, bc_button_event_t event, void *even
         (*event_count)++;
 
         bc_radio_pub_push_button(event_count);
-    }
-    else if (event == BC_BUTTON_EVENT_HOLD)
-    {
-        bc_radio_enroll_to_gateway();
-
-        bc_led_set_mode(&led, BC_LED_MODE_OFF);
-
-        bc_led_pulse(&led, 1000);
     }
 }
 
@@ -78,7 +72,7 @@ void application_init(void)
 {
     // Initialize LED
     bc_led_init(&led, BC_GPIO_LED, false, false);
-    bc_led_set_mode(&led, BC_LED_MODE_ON);
+    bc_led_set_mode(&led, BC_LED_MODE_OFF);
 
     bc_radio_init();
 
@@ -96,5 +90,9 @@ void application_init(void)
     bc_tag_temperature_set_update_interval(&temperature, TEMPERATURE_UPDATE_INTERVAL);
     bc_tag_temperature_set_event_handler(&temperature, temperature_tag_event_handler, &temperature_event_param);
 
-    bc_led_set_mode(&led, BC_LED_MODE_OFF);
+    bc_radio_enroll_to_gateway();
+
+    bc_radio_pub_info(FIRMWARE);
+
+    bc_led_pulse(&led, 2000);
 }

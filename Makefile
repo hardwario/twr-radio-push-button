@@ -1,4 +1,7 @@
 SDK_DIR ?= sdk
+TAG ?= dev
+
+CFLAGS += -D'TAG="${TAG}"'
 
 -include sdk/Makefile.mk
 

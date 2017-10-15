@@ -1,6 +1,10 @@
 #ifndef _APPLICATION_H
 #define _APPLICATION_H
 
+#ifndef TAG
+#define TAG "dev"
+#endif
+
 #include <bcl.h>
 
 typedef struct
