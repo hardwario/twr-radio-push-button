@@ -2,9 +2,9 @@
 
 # Firmware for BigClown Button Kit
 
-[![Travis](https://img.shields.io/travis/bigclownlabs/bcf-kit-push-button/master.svg)](https://travis-ci.org/bigclownlabs/bcf-kit-push-button)
-[![Release](https://img.shields.io/github/release/bigclownlabs/bcf-kit-push-button.svg)](https://github.com/bigclownlabs/bcf-kit-push-button/releases)
-[![License](https://img.shields.io/github/license/bigclownlabs/bcf-kit-push-button.svg)](https://github.com/bigclownlabs/bcf-kit-push-button/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/bigclownlabs/bcf-kit-wireless-push-button/master.svg)](https://travis-ci.org/bigclownlabs/bcf-kit-wireless-push-button)
+[![Release](https://img.shields.io/github/release/bigclownlabs/bcf-kit-wireless-push-button.svg)](https://github.com/bigclownlabs/bcf-kit-wireless-push-button/releases)
+[![License](https://img.shields.io/github/license/bigclownlabs/bcf-kit-wireless-push-button.svg)](https://github.com/bigclownlabs/bcf-kit-wireless-push-button/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/BigClownLabs.svg?style=social&label=Follow)](https://twitter.com/BigClownLabs)
 
 This repository contains firmware for Button Kit
