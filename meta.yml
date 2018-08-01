@@ -1,0 +1,9 @@
+article: https://www.bigclown.com/doc/projects/wireless-push-button/
+video: https://youtu.be/OCPPKXzCBg0
+images:
+  - title:
+    url: https://www.bigclown.com/kits/push-button/main.png
+assembly:
+  - name: BigClown Button Module
+  - name: BigClown Core Module
+  - name: BigClown Battery Module
