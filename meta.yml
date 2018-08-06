@@ -6,4 +6,4 @@ images:
 assembly:
   - name: BigClown Button Module
   - name: BigClown Core Module
-  - name: BigClown Battery Module
+  - name: BigClown Mini Battery Module
