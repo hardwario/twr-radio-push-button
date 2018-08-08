@@ -35,7 +35,6 @@ void button_event_handler(bc_button_t *self, bc_button_event_t event, void *even
 
 void battery_event_handler(bc_module_battery_event_t event, void *event_param)
 {
-    (void) event;
     (void) event_param;
 
     float voltage;
@@ -99,7 +98,7 @@ void application_init(void)
     bc_tmp112_set_event_handler(&tmp112, tmp112_event_handler, &temperature_event_param);
     bc_tmp112_set_update_interval(&tmp112, TEMPERATURE_UPDATE_SERVICE_INTERVAL);
 
-    bc_radio_pairing_request("kit-push-button", VERSION);
+    bc_radio_pairing_request("push-button", VERSION);
 
     bc_scheduler_register(switch_to_normal_mode_task, NULL, SERVICE_INTERVAL_INTERVAL);
 
