@@ -25,8 +25,14 @@ bc_lis2dh12_t lis2dh12;
 // Dice instance
 bc_dice_t dice;
 
-// Counter for press events
-uint16_t button_press_count = 0;
+// Counters for button events
+uint16_t button_click_count = 0;
+uint16_t button_hold_count = 0;
+
+// Time of button has press
+bc_tick_t tick_start_button_press;
+// Flag for button hold event
+bool button_hold_event;
 
 // Time of next temperature report
 bc_tick_t tick_temperature_report = 0;
@@ -34,19 +40,52 @@ bc_tick_t tick_temperature_report = 0;
 // This function dispatches button events
 void button_event_handler(bc_button_t *self, bc_button_event_t event, void *event_param)
 {
-    // Press event?
-    if (event == BC_BUTTON_EVENT_PRESS)
+    if (event == BC_BUTTON_EVENT_CLICK)
     {
         // Pulse LED for 100 milliseconds
         bc_led_pulse(&led, 100);
 
         // Increment press count
-        button_press_count++;
+        button_click_count++;
 
-        bc_log_info("APP: Publish button press count = %u", button_press_count);
+        bc_log_info("APP: Publish button press count = %u", button_click_count);
 
         // Publish button message on radio
-        bc_radio_pub_push_button(&button_press_count);
+        bc_radio_pub_push_button(&button_click_count);
+    }
+    else if (event == BC_BUTTON_EVENT_HOLD)
+    {
+        // Pulse LED for 250 milliseconds
+        bc_led_pulse(&led, 250);
+
+        // Increment hold count
+        button_hold_count++;
+
+        bc_log_info("APP: Publish button hold count = %u", button_hold_count);
+
+        // Publish message on radio
+        bc_radio_pub_event_count(BC_RADIO_PUB_EVENT_HOLD_BUTTON, &button_hold_count);
+
+        // Set button hold event flag
+        button_hold_event = true;
+    }
+    else if (event == BC_BUTTON_EVENT_PRESS)
+    {
+        // Reset button hold event flag
+        button_hold_event = false;
+
+        tick_start_button_press = bc_tick_get();
+    }
+    else if (event == BC_BUTTON_EVENT_RELEASE)
+    {
+        if (button_hold_event)
+        {
+            int hold_duration = bc_tick_get() - tick_start_button_press;
+
+            bc_log_info("APP: Publish button hold duration = %d", hold_duration);
+
+            bc_radio_pub_value_int(BC_RADIO_PUB_VALUE_HOLD_DURATION_BUTTON, &hold_duration);
+        }
     }
 }
 
@@ -165,6 +204,7 @@ void lis2dh12_event_handler(bc_lis2dh12_t *self, bc_lis2dh12_event_t event, void
                 bc_log_info("APP: Publish orientation = %d", orientation);
 
                 // Publish orientation message on radio
+                // Be careful, this topic is only development state, can be change in future.
                 bc_radio_pub_int("orientation", &orientation);
             }
         }
@@ -201,7 +241,7 @@ void application_init(void)
 
     // Initialize button
     bc_button_init(&button, BC_GPIO_BUTTON, BC_GPIO_PULL_DOWN, false);
-    bc_button_set_event_handler(&button, button_event_handler, &button_press_count);
+    bc_button_set_event_handler(&button, button_event_handler, NULL);
 
     // Initialize battery
     bc_module_battery_init();
