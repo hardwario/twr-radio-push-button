@@ -1,8 +1,19 @@
 article: https://www.bigclown.com/doc/projects/radio-push-button/
 video: https://youtu.be/OCPPKXzCBg0
 images:
-  - title:
-    url: https://www.bigclown.com/kits/push-button/main.png
+  - url: https://www.bigclown.com/kits/push-button/main.png
+articles:
+  - title: BigClown Light Control of LED Strip
+    url: https://www.hackster.io/jakub-smejkal/bigclown-light-control-of-led-strip-7fe73c
+    images:
+      - url: https://hackster.imgix.net/uploads/attachments/896435/_3JUEZAfEo5.blob?auto=compress%2Cformat&w=900&h=675&fit=min
+  - title: Wireless Presenter with Accelerometer
+    url: https://www.hackster.io/jakub-smejkal/wireless-presenter-with-accelerometer-962318
+    images:
+      - url: https://hackster.imgix.net/uploads/attachments/908791/radiopresenter_7UiAIHvr29.png?auto=compress%2Cformat&w=900&h=675&fit=min
+  - title: Night Lamp with Wireless Buttons and Motion Detector
+    url: https://www.hackster.io/hubmartin/night-lamp-with-wireless-buttons-and-motion-detector-1c32e8
+    video: https://hackster.imgix.net/uploads/attachments/732203/bigclown_night_lamp_53ALljpY8c.gif?auto=compress&gifq=35&w=900&h=675&fit=min&fm=mp4
 assembly:
   - name: BigClown Button Module
   - name: BigClown Core Module
