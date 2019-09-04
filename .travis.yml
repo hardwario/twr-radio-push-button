@@ -1,13 +1,13 @@
-dist: trusty
-language: c
-addons:
-  apt:
-    sources:
-      - sourceline: ppa:team-gcc-arm-embedded/ppa
-    packages:
-      - gcc-arm-embedded
+language: minimal
+
+services:
+  - docker
+
 script:
-  - make release OUT=bcf-radio-push-button-${TRAVIS_TAG} VERSION=${TRAVIS_TAG}
+  - >
+    docker run --rm -it -v `pwd`:/builds -u `id -u`:`id -g` hardwario/gcc-arm-embedded:latest
+    make release OUT=bcf-radio-push-button-${TRAVIS_TAG} VERSION=${TRAVIS_TAG}
+
 deploy:
   skip_cleanup: true
   file_glob: true
