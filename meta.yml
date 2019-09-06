@@ -5,14 +5,17 @@ images:
 articles:
   - title: BigClown Light Control of LED Strip
     url: https://www.hackster.io/jakub-smejkal/bigclown-light-control-of-led-strip-7fe73c
+    description: Control colored lights in your room with BigClown. Lights are controlled by orientation of Push button kit or by button itself.
     images:
       - url: https://hackster.imgix.net/uploads/attachments/896435/_3JUEZAfEo5.blob?auto=compress%2Cformat&w=900&h=675&fit=min
   - title: Wireless Presenter with Accelerometer
     url: https://www.hackster.io/jakub-smejkal/wireless-presenter-with-accelerometer-962318
+    description: Have your own presenter always with you. You can make wireless one with BigClown and their Push Button Kit. Just follow these instructions.
     images:
       - url: https://hackster.imgix.net/uploads/attachments/908791/radiopresenter_7UiAIHvr29.png?auto=compress%2Cformat&w=900&h=675&fit=min
   - title: Night Lamp with Wireless Buttons and Motion Detector
     url: https://www.hackster.io/hubmartin/night-lamp-with-wireless-buttons-and-motion-detector-1c32e8
+    description: Put smart LED strip to the lamp, under bed. Control intensity with a knob or wirelessly with push button or motion detector.
     video: https://hackster.imgix.net/uploads/attachments/732203/bigclown_night_lamp_53ALljpY8c.gif?auto=compress&gifq=35&w=900&h=675&fit=min&fm=mp4
 assembly:
   - name: BigClown Button Module
