@@ -1,11 +1,11 @@
 article: https://www.bigclown.com/doc/projects/radio-push-button/
 video: https://youtu.be/OCPPKXzCBg0
 images:
-  - url: https://cdn.myshoptet.com/usr/shop.hardwario.com/user/shop/category_portrait/156-2_button-kit-a1.jpg?5de56e1c
+  - url: https://github.com/hardwario/website/blob/master/static/kits-images/push-button/main.png
 articles:
   - title: HARDWARIO IoT Kit Light Control of LED Strip
     url: https://www.hackster.io/159159/hardwario-iot-kit-light-control-of-led-strip-7fe73c
-    description: Control colored lights in your room with BigClown. Lights are controlled by orientation of Push button kit or by button itself.
+    description: Control colored lights in your room with HARDWARIO. Lights are controlled by orientation of Push button kit or by button itself.
     images:
       - url: https://hackster.imgix.net/uploads/attachments/1050360/_fbE0JXjbPm.blob?auto=compress%2Cformat&w=900&h=675&fit=min
   - title: Wireless Presenter with Accelerometer
@@ -28,6 +28,6 @@ articles:
     description: Put smart LED strip to the lamp, under bed. Control intensity with a knob or wirelessly with push button or motion detector.
     video: https://hackster.imgix.net/uploads/attachments/732203/bigclown_night_lamp_53ALljpY8c.gif?auto=compress&gifq=35&w=900&h=675&fit=min&fm=mp4
 assembly:
-  - name: BigClown Button Module
-  - name: BigClown Core Module
-  - name: BigClown Mini Battery Module
+  - name: HARDWARIO Button Module
+  - name: HARDWARIO Core Module
+  - name: HARDWARIO Mini Battery Module
