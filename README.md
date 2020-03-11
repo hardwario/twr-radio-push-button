@@ -9,7 +9,7 @@
 
 See the project documentation on this link:
 
-**https://www.bigclown.com/doc/projects/radio-push-button/**
+**https://developers.hardwario.com/projects/radio-push-button/**
 
 ## License
 
