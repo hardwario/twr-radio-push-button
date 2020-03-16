@@ -1,7 +1,7 @@
 article: https://www.bigclown.com/doc/projects/radio-push-button/
 video: https://youtu.be/OCPPKXzCBg0
 images:
-  - url: https://github.com/hardwario/website/blob/master/static/kits-images/push-button/main.png
+  - url: https://raw.githubusercontent.com/hardwario/website/master/static/kits-images/push-button/main.png
 articles:
   - title: HARDWARIO IoT Kit Light Control of LED Strip
     url: https://www.hackster.io/159159/hardwario-iot-kit-light-control-of-led-strip-7fe73c
