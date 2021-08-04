@@ -2,7 +2,7 @@
 
 # Firmware for HARDWARIO Radio Push Button
 
-[![Travis](https://travis-ci.org/hardwario/twr-radio-push-button.svg?branch=master)](https://travis-ci.org/hardwario/twr-radio-push-button)
+[![build](https://github.com/hardwario/twr-radio-push-button/actions/workflows/main.yml/badge.svg)](https://github.com/hardwario/twr-radio-push-button/actions/workflows/main.yml)
 [![Release](https://img.shields.io/github/release/bigclownlabs/bcf-radio-push-button.svg)](https://github.com/bigclownlabs/bcf-radio-push-button/releases)
 [![License](https://img.shields.io/github/license/bigclownlabs/bcf-radio-push-button.svg)](https://github.com/bigclownlabs/bcf-radio-push-button/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/hardwario_en.svg?style=social&label=Follow)](https://twitter.com/hardwario_en)
