@@ -21,7 +21,7 @@ jobs:
         #if: ${{ github.event_name == 'release' }}
         run: |
           sed -i "s/vdev/${GITHUB_REF#refs/*/}/g" platformio.ini
-          echo platformio.ini
+          cat platformio.ini
       - name: Build PlatformIO project
         run: pio run -e release
       - name: Set helper variables
