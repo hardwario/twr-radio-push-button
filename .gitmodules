@@ -1,3 +1,4 @@
 [submodule "sdk"]
 	path = sdk
 	url = https://github.com/hardwario/twr-sdk.git
+	branch = cmake
