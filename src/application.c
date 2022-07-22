@@ -265,7 +265,7 @@ void application_init(void)
     twr_radio_init(TWR_RADIO_MODE_NODE_SLEEPING);
 
     // Send radio pairing request
-    twr_radio_pairing_request("push-button", VERSION);
+    twr_radio_pairing_request("push-button", FW_VERSION);
 
     twr_scheduler_register(exit_service_mode_task, NULL, SERVICE_MODE_INTERVAL);
 
